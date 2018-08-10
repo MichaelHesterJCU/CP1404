@@ -7,16 +7,16 @@ If sales are $1,000 or over, the bonus is 15%.
 
 Rehashed version to support function calls
 """
-def main():
-    user_input = float(input("Enter sales: $"))
-    calculation(user_input)
-    print("Bonus: ${:.0f}".format(calculation(user_input)))
-    main()
-
-def calculation(sales):
+def calculation(sales):     #takes user input and applies some math to it before returning the data back to the open code.
     if sales <1000:
         bonus = sales / 10
     else: bonus = sales / 6.66
     return(bonus)
 
-main()
+user_input = 0      #Avoiding an instant-failure for the while-loop
+while user_input > -1:
+    user_input = float(input("Enter sales: $"))
+    final_bonus = calculation(user_input)       #Calls upon the calculation function and feeds in the user input
+    print("Bonus: ${:.0f}".format(final_bonus))
+else:
+    print("Enter a positive number")
