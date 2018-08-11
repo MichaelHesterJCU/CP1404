@@ -17,7 +17,7 @@ def fahrenheit_to_celsius(input_fahrenheit):
     return converted_celsius
 
 
-def celsius_to_fahrenhfeit(input_celsius):
+def celsius_to_fahrenheit(input_celsius):
     converted_fahrenheit = input_celsius * 9 / 5 + 32
     return converted_fahrenheit
 
